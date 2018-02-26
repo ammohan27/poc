@@ -10,6 +10,6 @@ http://www.springframework.org/schema/beans http://www.springframework.org/schem
 	<flow name="say-hello-mule4-dockerFlow"  >
         <http:listener config-ref="HTTP_Listener_Configuration" path="/hello" doc:name="HTTP"/>
 		<set-payload value="#['I am running inside docker image javastreets/mule:latest-4']" doc:name="Set Payload"  mimeType="text/plain"/>
-        <logger level="INFO" doc:name="Logger"/>
+        <logger message="loggger added" level="INFO" doc:name="Logger"/>
 	</flow>
 </mule>
